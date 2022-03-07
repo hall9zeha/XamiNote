@@ -9,7 +9,7 @@ Escrita en Java y construida en Android Studio.
 
 [XamiNote](https://play.google.com/store/apps/details?id=com.BarryZea.XamiNote&hl=es&gl=US) está disponible en  Google Play Store.
 
-<p align="left">nimboWeather_icon_playStore.png
+<p align="left">
 <a href="https://play.google.com/store/apps/details?id=com.BarryZea.XamiNote&hl=es&gl=US">
     <img alt="Get it on Google Play"
         height="80"
