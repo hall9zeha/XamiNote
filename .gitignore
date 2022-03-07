@@ -1,0 +1,57 @@
+# ingorando directorios y archivos
+
+#excluimos todo menos HomeFragment.java
+
+app/*
+!app/src
+app/src/*
+!app/src/main
+app/src/main/*
+
+#excluimos todo menos la vista card_view_notes_style.xml
+
+!app/src/main/res
+app/src/main/res/*
+!app/src/main/res/layout
+app/src/main/res/layout/*
+!app/src/main/res/layout/card_view_notes_style.xml
+
+!app/src/main/java
+app/src/main/java/*
+!app/src/main/java/com
+app/src/main/java/com/*
+!app/src/main/java/com/BarryZea
+app/src/main/java/com/BarryZea/*
+!app/src/main/java/com/BarryZea/XamiNote
+app/src/main/java/com/BarryZea/XamiNote/*
+!app/src/main/java/com/BarryZea/XamiNote/ui
+app/src/main/java/com/BarryZea/XamiNote/ui/*
+
+
+#excluimos todo menos HomeFragment.java
+!app/src/main/java/com/BarryZea/XamiNote/ui/home
+app/src/main/java/com/BarryZea/XamiNote/ui/home/*
+!app/src/main/java/com/BarryZea/XamiNote/ui/home/HomeFragment.java
+
+#excluimos todo menos TaskViewModel.java
+!app/src/main/java/com/BarryZea/XamiNote/ViewModel
+app/src/main/java/com/BarryZea/XamiNote/ViewModel/*
+!app/src/main/java/com/BarryZea/XamiNote/ViewModel/TaskViewModel.java
+
+#excluimos todo menos NoteAdapterRecyclerView.java
+!app/src/main/java/com/BarryZea/XamiNote/Adapter
+app/src/main/java/com/BarryZea/XamiNote/Adapter/*
+!app/src/main/java/com/BarryZea/XamiNote/Adapter/NoteAdapterRecyclerView.java
+
+
+
+
+gradle/
+gradlew
+.gradle
+gradlew.bat
+settings.gradle
+local.properties
+build.gradle
+gradle.properties
+.idea

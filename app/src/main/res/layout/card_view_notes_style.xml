@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="210dp"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/noteCardView"
+    cardView:cardElevation="2dp"
+    android:layout_margin="3dp"
+    android:orientation="vertical"
+    android:padding="1dp"
+    android:transitionName="@string/transitionNameCardView"
+    android:layout_weight="50"
+    android:foreground="@drawable/action_mode_background_item"
+
+    android:clickable="true"
+    android:focusable="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="3dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ctlMainCardNote"
+        >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/linearHeadCardView"
+        android:orientation="horizontal"
+
+        cardView:layout_constraintStart_toStartOf="parent"
+        cardView:layout_constraintEnd_toEndOf="parent"
+        cardView:layout_constraintTop_toTopOf="parent"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:id="@+id/linearTitleNoteCard1"
+            android:orientation="horizontal"
+            cardView:layout_constraintStart_toStartOf="parent"
+            cardView:layout_constraintTop_toTopOf="parent"
+            cardView:layout_constraintBottom_toBottomOf="parent"
+            cardView:layout_constraintEnd_toStartOf="@id/linearDetailsCard1"
+
+            >
+            <TextView
+                android:background="@android:color/transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/titleNoteCard1"
+                android:layout_marginStart="5dp"
+
+                android:layout_marginTop="3dp"
+                android:textSize="13sp"
+                android:ellipsize="marquee"
+                android:gravity="start"
+
+                tools:text="T´titulo de nota o lista de tareas"
+
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearDetailsCard1"
+            android:layout_width="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            cardView:layout_constraintEnd_toEndOf="parent"
+            cardView:layout_constraintTop_toTopOf="parent"
+            cardView:layout_constraintBottom_toBottomOf="parent"
+            cardView:layout_constraintStart_toEndOf="@id/linearTitleNoteCard1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/taskListIndicator2"
+                android:background="@android:color/transparent"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                android:src="@drawable/ic_action_lock" />
+
+            <ImageView
+                android:id="@+id/taskListIndicator1"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_task_indicator" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="3dp"
+    android:background="@color/colorAccent"
+    android:layout_marginTop="5dp"
+    android:id="@+id/notesSeparatorView"
+    cardView:layout_constraintTop_toBottomOf="@id/linearHeadCardView"
+    cardView:layout_constraintStart_toStartOf="parent"
+    cardView:layout_constraintEnd_toEndOf="parent"
+    />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        cardView:layout_constraintStart_toStartOf="parent"
+        cardView:layout_constraintEnd_toEndOf="parent"
+        cardView:layout_constraintTop_toBottomOf="@id/notesSeparatorView"
+        android:layout_marginTop="8dp"
+        >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/ivSecurity"
+            android:src="@drawable/ic_security_check"
+            cardView:layout_constraintStart_toStartOf="parent"
+            cardView:layout_constraintEnd_toEndOf="parent"
+            cardView:layout_constraintTop_toTopOf="parent"
+            cardView:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="gone"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:id="@+id/contentNoteTextView"
+            android:background="@null"
+            android:ellipsize="end"
+            android:textSize="13sp"
+            android:maxLines="6"
+            android:visibility="gone"
+            android:layout_marginHorizontal="7dp"
+            android:text="Prueba de contenido de nota o lista de tareas \n nuevo contenido hard code"
+            cardView:layout_constraintStart_toStartOf="parent"
+            cardView:layout_constraintEnd_toEndOf="parent"
+            cardView:layout_constraintTop_toTopOf="parent"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            cardView:layout_constraintStart_toStartOf="parent"
+            cardView:layout_constraintEnd_toEndOf="parent"
+            cardView:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"
+            android:id="@+id/ctlTasksPrev">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgCheck1"
+            android:src="@drawable/ic_square"
+            cardView:layout_constraintStart_toStartOf="parent"
+            cardView:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTask1"
+            android:textSize="12sp"
+            tools:text="tarea a realiza numero uno"
+            cardView:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="5dp"
+            android:ellipsize="marquee"
+            cardView:layout_constraintTop_toTopOf="@id/imgCheck1"
+            cardView:layout_constraintBottom_toBottomOf="@id/imgCheck1"
+            cardView:layout_constraintStart_toEndOf="@id/imgCheck1"
+            android:layout_marginStart="5dp"
+            android:singleLine="true" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgCheck2"
+            android:src="@drawable/ic_square"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            cardView:layout_constraintStart_toStartOf="parent"
+            cardView:layout_constraintTop_toBottomOf="@id/imgCheck1"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTask2"
+            tools:text="tarea a realiza numero uno"
+            android:textSize="12sp"
+            cardView:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="5dp"
+            android:ellipsize="marquee"
+            cardView:layout_constraintTop_toTopOf="@id/imgCheck2"
+            cardView:layout_constraintBottom_toBottomOf="@id/imgCheck2"
+            cardView:layout_constraintStart_toEndOf="@id/imgCheck2"
+            android:layout_marginStart="5dp"
+            android:singleLine="true" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgCheck3"
+            android:src="@drawable/ic_square"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            cardView:layout_constraintStart_toStartOf="parent"
+            cardView:layout_constraintTop_toBottomOf="@id/imgCheck2"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTask3"
+            tools:text="tarea a realiza numero uno"
+            android:textSize="12sp"
+            cardView:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="5dp"
+            android:ellipsize="marquee"
+            cardView:layout_constraintTop_toTopOf="@id/imgCheck3"
+            cardView:layout_constraintBottom_toBottomOf="@id/imgCheck3"
+            cardView:layout_constraintStart_toEndOf="@id/imgCheck3"
+            android:layout_marginStart="5dp"
+            android:singleLine="true" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgCheck4"
+            android:src="@drawable/ic_square"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            cardView:layout_constraintStart_toStartOf="parent"
+            cardView:layout_constraintTop_toBottomOf="@id/imgCheck3"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTask4"
+            tools:text="tarea a realiza numero uno"
+            android:textSize="12sp"
+            cardView:layout_constraintTop_toTopOf="@id/imgCheck4"
+            cardView:layout_constraintBottom_toBottomOf="@id/imgCheck4"
+            cardView:layout_constraintStart_toEndOf="@id/imgCheck4"
+            cardView:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="5dp"
+            android:ellipsize="marquee"
+            android:layout_marginStart="5dp"
+            android:singleLine="true" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgCheck5"
+                android:src="@drawable/ic_square"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="3dp"
+                cardView:layout_constraintStart_toStartOf="parent"
+                cardView:layout_constraintTop_toBottomOf="@id/imgCheck4"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTask5"
+                tools:text="tarea a realiza numero uno"
+                android:textSize="12sp"
+                cardView:layout_constraintTop_toTopOf="@id/imgCheck5"
+                cardView:layout_constraintBottom_toBottomOf="@id/imgCheck5"
+                cardView:layout_constraintStart_toEndOf="@id/imgCheck5"
+                cardView:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="5dp"
+                android:ellipsize="marquee"
+                android:layout_marginStart="5dp"
+                android:singleLine="true" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgCheck6"
+                android:src="@drawable/ic_square"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="3dp"
+                cardView:layout_constraintStart_toStartOf="parent"
+                cardView:layout_constraintTop_toBottomOf="@id/imgCheck5"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTask6"
+                tools:text="tarea a realiza numero uno"
+                android:textSize="12sp"
+                cardView:layout_constraintTop_toTopOf="@id/imgCheck6"
+                cardView:layout_constraintBottom_toBottomOf="@id/imgCheck6"
+                cardView:layout_constraintStart_toEndOf="@id/imgCheck6"
+                cardView:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="5dp"
+                android:ellipsize="marquee"
+                android:layout_marginStart="5dp"
+                android:singleLine="true" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgCheck7"
+                android:src="@drawable/ic_square"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="3dp"
+                cardView:layout_constraintStart_toStartOf="parent"
+                cardView:layout_constraintTop_toBottomOf="@id/imgCheck6"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTask7"
+                tools:text="tarea a realiza numero uno"
+                android:textSize="12sp"
+                cardView:layout_constraintTop_toTopOf="@id/imgCheck7"
+                cardView:layout_constraintBottom_toBottomOf="@id/imgCheck7"
+                cardView:layout_constraintStart_toEndOf="@id/imgCheck7"
+                cardView:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="5dp"
+                android:ellipsize="marquee"
+                android:layout_marginStart="5dp"
+                android:singleLine="true" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearContentCardBottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        cardView:layout_constraintBottom_toBottomOf="parent"
+        cardView:layout_constraintStart_toStartOf="parent"
+        cardView:layout_constraintEnd_toEndOf="parent"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            cardView:layout_constraintStart_toStartOf="parent"
+            cardView:layout_constraintBottom_toBottomOf="parent"
+            cardView:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/lnIconsNotify"
+            >
+        <ImageView
+            android:id="@+id/taskReminderIndicator3"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_action_reminder"
+            android:visibility="gone"
+            android:layout_gravity="bottom"
+            android:paddingBottom="3dp"
+            android:layout_height="17dp"
+            android:layout_width="17dp"
+            />
+        <ImageView
+            android:id="@+id/taskReminderEventIndicator4"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_action_reminder_event"
+            android:visibility="gone"
+            android:layout_gravity="bottom"
+            android:paddingBottom="3dp"
+            android:layout_height="17dp"
+            android:layout_width="17dp"
+            />
+            <ImageView
+                android:id="@+id/taskReminderEventIndicator5"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_action_push_pin"
+                android:visibility="gone"
+                android:layout_gravity="bottom"
+                android:paddingBottom="3dp"
+                android:layout_height="17dp"
+                android:layout_width="17dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:gravity="center"
+            cardView:layout_constraintEnd_toEndOf="parent"
+            cardView:layout_constraintTop_toTopOf="parent"
+            cardView:layout_constraintBottom_toBottomOf="parent"
+            cardView:layout_constraintStart_toEndOf="@id/lnIconsNotify"
+            >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="fecha de hoy00"
+        android:gravity="right"
+        android:textSize="10sp"
+        android:id="@+id/fechaNoteTextView"
+        android:layout_marginRight="5dp"
+        android:background="@null"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+
